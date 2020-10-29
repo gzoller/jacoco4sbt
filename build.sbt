@@ -1,7 +1,7 @@
 name := "jacoco4sbt"
 organization := "co.blocke"
 
-version in ThisBuild := "3.2.0"
+version in ThisBuild := "3.2.1"
 
 sbtPlugin := true
 

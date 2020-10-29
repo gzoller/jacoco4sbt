@@ -1,3 +1,9 @@
+resolvers += Resolver.url(
+  "co.blocke release resolver",
+  url("https://dl.bintray.com/blocke/releases/")
+)(Resolver.ivyStylePatterns)
+addSbtPlugin("co.blocke" % "gitflow-packager" % "0.1.9")
+
 addSbtPlugin("com.jsuereth" % "sbt-pgp" % "1.1.1")
 addSbtPlugin("org.foundweekends" % "sbt-bintray" % "0.5.4")
 addSbtPlugin("com.eed3si9n" % "sbt-buildinfo" % "0.10.0")
