@@ -40,7 +40,7 @@ buildInfoKeys := Seq[BuildInfoKey](
   "sbtVersion" -> (sbtVersion in pluginCrossBuild).value
 )
 
-publishMavenStyle := true
+publishMavenStyle := false
 bintrayOrganization := Some("blocke")
 bintrayReleaseOnPublish in ThisBuild := true
 bintrayRepository := "provisional"
