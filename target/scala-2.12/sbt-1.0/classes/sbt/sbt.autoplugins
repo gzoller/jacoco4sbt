@@ -1,0 +1,3 @@
+com.github.sbt.jacoco.JacocoItPlugin
+com.github.sbt.jacoco.JacocoPlugin
+com.github.sbt.jacoco.coveralls.JacocoCoverallsPlugin

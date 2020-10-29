@@ -1,0 +1,10 @@
+[0m[[0m[33mwarn[0m] [0m[0m/Users/wmy965/git/jacoco4sbt/src/main/scala/com/github/sbt/jacoco/BaseJacocoPlugin.scala:97:30: [1mThe setting/task `X / y` is not being invoked inside the task definition.[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[31mproblem[0m:  Settings/tasks missing `.value` are not initialized and their dependency is not registered.[0m
+[0m[[0m[33mwarn[0m] [0m[0m[32msolution[0m:[0m
+[0m[[0m[33mwarn[0m] [0m[0m  1. Replace `X / y` by `(X / y).value` or remove it if unused.[0m
+[0m[[0m[33mwarn[0m] [0m[0m  2. Add `import sbt.dsl.LinterLevel.Ignore` to your build file to disable all task linting.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    [0m
+[0m[[0m[33mwarn[0m] [0m[0m    clean := jacocoDirectory map (dir => if (dir.exists) IO delete dir.listFiles),[0m
+[0m[[0m[33mwarn[0m] [0m[0m                             ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
