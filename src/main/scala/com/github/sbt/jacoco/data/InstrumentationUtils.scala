@@ -65,6 +65,10 @@ object InstrumentationUtils {
       IO.write(rebaseClassFiles(classFile).get, instrumentedClass)
     }
 
+    // Copy Scala 3 .tasty files into destDirectory, or tests will fail.
+    val tastyFiles = (PathFinder(classFiles) ** "*.tasty").get
+    IO.copy(tastyFiles.map( tf => (tf, rebaseClassFiles(tf).get) ))
+
     jacocoAgent ++ (Attributed.blank(destDirectory) +: classpath)
   }
 }
